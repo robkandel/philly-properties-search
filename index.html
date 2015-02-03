@@ -124,11 +124,11 @@
 		    </thead>
       		<tbody>
         		<% _.each( results.data.properties, function( item, i ){ %><tr>
-    	      		<td><% _.each( item.ownership.owners, function( owner, i ) { %><span><%= owner %><% if (i != item.ownership.owners.length-1) {%>, <% } %></span><% }); %></td>
-	            	<td><%= _global.backbone.view_helper.capitalize_text(item.full_address) %></td>
-    	        	<td><%= item.unit.replace(/\b0+/g, '') %></td>
-        	    	<td><%= _global.backbone.view_helper.capitalize_text(item.characteristics.description) %></td>
-            		<td class="buttonColumn"><a class="btn btn-default btn-primary" href="#!/address/<%= _global.format.detail_url(item) %>" role="button">View Full Details</a></td>
+    	      		<td><div class="tableHeaderText">Owner</div><div class="tableData"><% _.each( item.ownership.owners, function( owner, i ) { %><span><%= owner %><% if (i != item.ownership.owners.length-1) {%>, <% } %></span><% }); %></div><div class="clearAll"></div></td>
+	            	<td><div class="tableHeaderText">Address</div><div class="tableData"><%= _global.backbone.view_helper.capitalize_text(item.full_address) %></div><div class="clearAll"></div></td>
+    	        	<td><div class="tableHeaderText">Unit #</div><div class="tableData"><%= item.unit.replace(/\b0+/g, '') %></div><div class="clearAll"></div></td>
+        	    	<td><div class="tableHeaderText">Property Type</div><div class="tableData"><%= _global.backbone.view_helper.capitalize_text(item.characteristics.description) %></div><div class="clearAll"></div></td>
+            		<td class="buttonColumn"><div class="tableData"><a class="btn btn-default btn-primary" href="#!/address/<%= _global.format.detail_url(item) %>" role="button">View Full Details</a></div></td>
 	          	</tr><% }); %>
     	  	</tbody>
     	</table>
@@ -150,7 +150,7 @@
   				<div class="containerInner">
 	  				<h3 class="containerTitle">Property Details</h3>
 	  				<div class="col-xs-6 adjustLeft">
-    					<div class="mapHolder">
+    					<div class="mapHolder transitionAll">
     						<div class="theMap" id="the_map" data-lat="<%= results.data.properties[0].geometry.y %>" data-lng="<%= results.data.properties[0].geometry.x %>"></div>
     					</div>
     				</div>
@@ -200,16 +200,16 @@
   					<table class="table table-striped">
       					<thead>
 			        		<tr>
-		    			      <th>Issue Date</th><th>Type</th><th>Work Description</th><th>Status</th><th>Contractor Company</th>
+		    			      <th>Type</th><th>Issue Date</th><th>Work Description</th><th>Status</th><th>Contractor Company</th>
 			        		</tr>
 					    </thead>
     	  				<tbody>
 		        		<% _.each( permits, function( item, i ){ %><tr<% if (i >= 10) {%> class="rowHidden"<% }%> data-permit_id="<%= item.permit_number %>">
-    		    		    	<td class="width10"><%= _global.format.readable_date(item.issued_datetime) %></td>
-    		    		    	<td class="width10"><%= _global.backbone.view_helper.capitalize_text(item.application_description.replace(' PERMIT', '')) %></td>
-    		    		    	<td class="width55"><%= item.work_description %></td>
-    		    		    	<td class="width10 bold <%= _global.backbone.view_helper.status_class(item.status) %>"><%= _global.backbone.view_helper.capitalize_text(item.status) %></td>
-    		    		    	<td class="width15"><%= item.pri_contact_company_name %></td>
+    		    		    	<td class="width10"><div class="tableHeaderText">Type</div><div class="tableData"><%= _global.backbone.view_helper.capitalize_text(item.application_description.replace(' PERMIT', '')) %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width10"><div class="tableHeaderText">Issue Date</div><div class="tableData"><%= _global.format.readable_date(item.issued_datetime) %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width55"><div class="tableHeaderText">Work Description</div><div class="tableData"><%= item.work_description %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width10 bold <%= _global.backbone.view_helper.status_class(item.status) %>"><div class="tableHeaderText">Status</div><div class="tableData"><%= _global.backbone.view_helper.capitalize_text(item.status) %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width15 lastItem"><div class="tableHeaderText">Contractor Company</div><div class="tableData"><%= item.pri_contact_company_name %></div><div class="clearAll"></div></td>
 			          		</tr><% }); %>
 	    		  		</tbody>
     				</table>
@@ -231,11 +231,11 @@
 					    </thead>
     	  				<tbody>
 		        		<% _.each( licenses, function( item, i ){ %><tr<% if (i >= 10) {%> class="rowHidden"<% }%> data-license_id="<%= item.license_number %>">
-			        			<td class="width20"><%= item.license_type_name %></td>
-    		    		    	<td class="width15"><%= _global.format.readable_date(item.issued_datetime) %></td>
-    		    		    	<td class="width15"><%= item.expires_month %> <%= item.expires_year %></td>
-    		    		    	<td class="width15 bold <%= _global.backbone.view_helper.status_class(item.status) %>"><%= _global.backbone.view_helper.capitalize_text(item.status) %></td>
-    		    		    	<td class="width35"><%= item.pri_contact_company_name%></td>
+			        			<td class="width20"><div class="tableHeaderText">Type</div><div class="tableData"><%= item.license_type_name %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width15"><div class="tableHeaderText">Issue Due</div><div class="tableData"><%= _global.format.readable_date(item.issued_datetime) %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width15"><div class="tableHeaderText">Expiration</div><div class="tableData"><%= item.expires_month %> <%= item.expires_year %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width15 bold <%= _global.backbone.view_helper.status_class(item.status) %>"><div class="tableHeaderText">Status</div><div class="tableData"><%= _global.backbone.view_helper.capitalize_text(item.status) %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width35 lastItem"><div class="tableHeaderText">Company Contact</div><div class="tableData"><%= item.pri_contact_company_name%></div><div class="clearAll"></div></td>
 			          		</tr><% }); %>
 	    		  		</tbody>
     				</table>
@@ -257,10 +257,10 @@
 					    </thead>
     	  				<tbody>
 		        		<% _.each( violations, function( item, i ){ %><tr<% if (i >= 10) {%> class="rowHidden"<% }%> data-violation_id="<%= item.violation_details_id %>">
-			        			<td class="width15"><%= _global.format.readable_date(item.violation_datetime) %></td>
-    		    		    	<td class="width55"><%= item.violation_code_description %></td>
-    		    		    	<td class="width15 bold <%= _global.backbone.view_helper.status_class(item.violation_status) %>"><%= _global.backbone.view_helper.capitalize_text(item.violation_status) %></td>
-    		    		    	<td class="width15"><%= item.violation_location %></td>
+			        			<td class="width15"><div class="tableHeaderText">Date</div><div class="tableData"><%= _global.format.readable_date(item.violation_datetime) %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width55"><div class="tableHeaderText">Description</div><div class="tableData"><%= item.violation_code_description %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width15 bold <%= _global.backbone.view_helper.status_class(item.violation_status) %>"><div class="tableHeaderText">Status</div><div class="tableData"><%= _global.backbone.view_helper.capitalize_text(item.violation_status) %></div><div class="clearAll"></div></td>
+    		    		    	<td class="width15 lastItem"><div class="tableHeaderText">Location</div><div class="tableData"><%= item.violation_location %></div><div class="clearAll"></div></td>
 			          		</tr><% }); %>
 	    		  		</tbody>
     				</table>

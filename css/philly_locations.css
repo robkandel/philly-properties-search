@@ -242,18 +242,18 @@ hgroup {
 }
 
 .logoText {
-	font-weight: 700;
-	font-size: 18px;
-	color:#444;
+    font-weight: 700;
+    font-size: 18px;
+    color: #444;
 }
 
 .logoText .fa {
-	font-size: 20px;
-	color:#337ab7;
+    font-size: 20px;
+    color: #337ab7;
 }
 
 .logoText span {
-	margin-left: 5px;
+    margin-left: 5px;
 }
 
 section {
@@ -271,7 +271,7 @@ section {
     top: 0;
     left: 0;
     z-index: 9999;
-    display:none;
+    display: none;
 }
 
 .preloaderSpinnerWrapper {
@@ -329,35 +329,43 @@ section {
 }
 
 .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
-	vertical-align: middle;
+    vertical-align: middle;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n) {
+	background-color:#fff;
+}
+
+.table > tbody > tr.active > td, .table > tbody > tr.active > th, .table > tbody > tr > td.active, .table > tbody > tr > th.active, .table > tfoot > tr.active > td, .table > tfoot > tr.active > th, .table > tfoot > tr > td.active, .table > tfoot > tr > th.active, .table > thead > tr.active > td, .table > thead > tr.active > th, .table > thead > tr > td.active, .table > thead > tr > th.active{
+	background-color:#eee;
 }
 
 .buttonColumn {
-	text-align: right;
+    text-align: right;
 }
 
 .homePage {
-	max-width: 660px;
-	margin: 5% auto 0;
+    max-width: 660px;
+    margin: 5% auto 0;
 }
 
 .homePageIcon {
-	position: relative;
+    position: relative;
 }
 
 .homePageIconSym {
-	position: relative;
-	margin: auto;
-	width: 10em;
+    position: relative;
+    margin: auto;
+    width: 10em;
 }
 
 .homePageIconSym .fa {
-	font-size: 10em;
-	color:#337ab7;
+    font-size: 10em;
+    color: #337ab7;
 }
 
 .homePageTextTitle {
-	color: #444;
+    color: #444;
     font-size: 3.42857142857143em;
     font-weight: 700;
     line-height: 0.70833333333333em;
@@ -366,7 +374,7 @@ section {
 }
 
 .homePageTextTitle span {
-	color: #777;
+    color: #777;
     display: block;
     font-size: 0.66666666666667em;
     font-weight: 300;
@@ -374,205 +382,198 @@ section {
 }
 
 .homePage .searchBar {
-	margin-top: 1.42857142857143em;
+    margin-top: 1.42857142857143em;
 }
 
 .homePageText {
-	position: relative;
-	margin-top: 0.71428571428571em;
-	font-style:italic;
-	color:#777;
+    position: relative;
+    margin-top: 0.71428571428571em;
+    font-style: italic;
+    color: #777;
 }
 
 .formHolder {
-	position: relative;
-	float: right;
-	width: 100%;
-	margin: 1.42857142857143em 0;	
+    position: relative;
+    float: right;
+    width: 100%;
+    margin: 1.42857142857143em 0;
 }
 
 .row:after, .row:before {
-	clear:both;
+    clear: both;
 }
 
 .resultsFound {
-	margin: 1.42857142857143em 0;
+    margin: 1.42857142857143em 0;
 }
 
 .addressSearched {
-	position: relative;
-	padding: 10px;
-	background-color:#f8f8f8;
-	border-radius: 8px;
+    position: relative;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
 }
 
 .addressSearchedData {
-	font-size: 36px;
-	font-weight: 700;
-	color:#444;
+    font-size: 30px;
+    font-weight: 700;
+    color: #444;
 }
 
 .totalCountData {
-	position: relative;
-	font-size: 20px;
-	color:#777;
-	font-weight: 300;
-	display:block;
+    position: relative;
+    font-size: 20px;
+    color: #777;
+    font-weight: 300;
+    display: block;
 }
 
 .paginationWrapper {
-	position: relative;
-	border-top: 1px solid #ccc;
-	text-align: right;
-	margin-top: 0.71428571428571em;
+    position: relative;
+    border-top: 1px solid #ccc;
+    text-align: right;
+    margin-top: 0.71428571428571em;
 }
 
 .form-control-pagination {
-	float: left;
-	max-width: 100px;
-	text-align: center;
-	border-left: none;
-	border-right: none;
-	border-radius: 0px;
-}
-
-.adjustRight {
-	padding-right: 0px;
-}
-
-.adjustLeft {
-	padding-left: 0px;
+    float: left;
+    max-width: 100px;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
 }
 
 .mapHolder {
-	position: relative;
-	width: 100%;
-	padding-bottom: 50%;
-	background-color:#444;
+    position: relative;
+    width: 100%;
+    padding-bottom: 65%;
+    background-color: #444;
+    margin-bottom: 20px;
 }
 
 .theMap {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: calc(100% - 8px);
-	height: calc(100% - 8px);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
 }
 
 .splitTitle {
-	font-weight: 700;
-	font-size: 12px;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .rowHidden {
-	display:none;
+    display: none;
 }
 
 .containerTitle {
-	font-weight: 700;
-	font-size: 16px;
-	position: relative;
-	text-transform: uppercase;
-	color:#777;
-	border-bottom: 3px solid #777;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+    text-transform: uppercase;
+    color: #777;
+    border-bottom: 3px solid #777;
 }
 
 .content-li {
-	position: relative;
-	margin-top: 60px;
+    position: relative;
+    margin-top: 60px;
 }
 
 .liModule {
-	position: relative;
+    position: relative;
 }
 
-.liModule .containerInner{
-	position: relative;
-	padding: 10px;
-	background-color:#f8f8f8;
-	border-radius: 8px;
+.liModule .containerInner {
+    position: relative;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
 }
 
 .width5 {
-	width: 5%;
+    width: 5%;
 }
 
 .width10 {
-	width: 10%;
+    width: 10%;
 }
 
 .width15 {
-	width: 15%;
+    width: 15%;
 }
 
 .width20 {
-	width: 20%;
+    width: 20%;
 }
 
 .width25 {
-	width: 25%;
+    width: 25%;
 }
 
 .width30 {
-	width: 30%;
+    width: 30%;
 }
 
 .width35 {
-	width: 35%;
+    width: 35%;
 }
 
 .width40 {
-	width: 40%;
+    width: 40%;
 }
 
 .width45 {
-	width: 45%;
+    width: 45%;
 }
 
 .width50 {
-	width: 50%;
+    width: 50%;
 }
 
 .width55 {
-	width: 55%;
+    width: 55%;
 }
 
 .width100 {
-	display:block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .table {
-	margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .bold {
-	font-weight: 700;
+    font-weight: 700;
 }
 
 .badge {
-	position: relative;
-	top: -1px;
+    position: relative;
+    top: -1px;
 }
 
 .btn-showAll {
-	position: relative;
-	display:block;
-	margin-top: 10px;
-	background-color:#eee;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    background-color: #eee;
 }
 
 .btn-showAll span {
-	position: relative;
-	font-weight: 700;
-	font-size: 12px;
-	text-transform: uppercase;
+    position: relative;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 .btn-showAll span:after {
-	border-left: 4px solid transparent;
+    border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 4px solid #444;
     content: "";
@@ -583,72 +584,221 @@ section {
     width: 8px;
 }
 
-
 .btn-showLess span:after {
-	border-top: 4px solid transparent;
-	border-left: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-bottom: 4px solid #444;
-    top:1px;
+    top: 1px;
 }
 
 .zeroResults, .errorWrapper {
-	position: relative;
-	margin-top: 40px
+    position: relative;
+    margin-top: 40px;
 }
 
 .zeroResultsText {
-	position: relative;
-	text-align: center;
-	font-weight: 700;
-	font-size: 24px;
-	font-style:italic;
-	color:#777;
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    font-style: italic;
+    color: #777;
 }
 
 .errorWrapper {
-	text-align: center;
-	color:#a82427;
+    text-align: center;
+    color: #a82427;
 }
 
 .errorIcon {
-	font-size: 80px;
+    font-size: 80px;
 }
 
 .errorText {
-	position: relative;
-	max-width: 600px;
-	margin: auto;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
 }
+
+.tableHeaderText, .table > tbody > tr > .splitTitle {
+	position: relative;
+	font-weight: 700;
+	width: 30%;
+	float: left;
+}
+
+.tableData, .table > tbody > tr > .splitData {
+	position: relative;
+	float: right;
+	width: 70%;
+}
+
+table thead {
+	display:none;
+}
+
+.table > tbody > tr > td {
+	width: 100%;
+	display:block;
+}
+
+.buttonColumn .tableData {
+	width: 100%;
+	float: none;
+	text-align: center;
+}
+
+.table > tbody > tr > .buttonColumn {
+	padding: 16px 8px;
+	border-bottom: 1px solid #aaa;
+}
+
+.table > tbody > tr > .lastItem {
+    padding-bottom: 30px ;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n) > .lastItem {
+	background-color:#f8f8f8;
+	border-bottom: 1px solid #aaa;
+}
+
+.table-striped > tbody > tr > td:first-child {
+	border-top: 2px solid #ccc;
+}
+
+.table-striped > tbody > tr:first-child > td:first-child {
+	border-top: none;
+}
+
+.col-xs-6 {
+	float: none;
+	width: auto;
+	padding: 0px;
+}
+
+.adjustRight {
+	border-bottom: 2px solid #777;
+	padding-bottom: 30px;
+	margin-bottom: -30px;
+}
+
+.table-striped > tbody > tr > .splitTitle, .table-striped > tbody > tr:first-child > .splitTitle:first-child, .table-striped > tbody > tr > .splitTitle:first-child {
+	border-top: 1px solid #ddd;
+}
+
 
 @media screen and (min-width:560px) {
-	.formHolder {
-		max-width: 50%;
+    .formHolder {
+        max-width: 50%;
+    }
+    
+    .addressSearchedData {
+    	font-size: 30px;
+    }
+    
+    .mapHolder {
+    	padding-bottom: 50%;
+    }
+}
+
+@media screen and (min-width:768px) {
+	.addressSearchedData {
+		font-size: 36px;
+	}
+	
+    .homePageIconSym {
+        float: left;
+        margin-right: 1.42857142857143em;
+    }
+
+    .homePageTextTitle {
+        top: 1.14583333333333em;
+        text-align: left;
+    }
+
+    .homePageIcon {
+        margin-left: 17.5%;
+    }
+
+    .totalCountData {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .formHolder {
+        max-width: 33.333333%;
+    }
+    
+    table thead {
+		display:table-header-group;
+	}
+    
+    .tableHeaderText {
+    	display:none;
+    }
+    
+    .table > tbody > tr > td {
+    	width: auto;
+    	display:table-cell;
+    }
+    
+    .tableData, .tableHeaderText, .table > tbody > tr > .splitTitle, .tableData, .table > tbody > tr > .splitData {
+		float:none;
+		width: auto;
+	}
+	
+	.table > tbody > tr > .buttonColumn {
+		 border-bottom: none;
+		 padding: 8px;
+	}
+	
+	.buttonColumn .tableData {
+		text-align: right;
+	}
+	
+	.table > tbody > tr > .lastItem {
+    	padding-bottom: 8px ;
+	}
+
+	.table-striped > tbody > tr:nth-of-type(2n) > .lastItem {
+		background-color:transparent;
+		border-bottom: none;
+	}
+
+	.table-striped > tbody > tr > td:first-child {
+		border-top: 1px solid #ddd;
+	}
+
+	.table-striped > tbody > tr:first-child > td:first-child {
+		border-top: 1px solid #ddd;
+	}
+	
+	.col-xs-6 {
+		float: left;
+		width: 50%;
+		padding: 0px 15px;
+	}
+	
+	.adjustRight {
+	    padding-right: 0px;
+	    border-bottom: none;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+
+	.adjustLeft {
+    	padding-left: 0px;
+	}
+	
+	.mapHolder {
+		padding-bottom: 70%;
 	}
 }
 
 
-@media screen and (min-width:768px) {
-	.homePageIconSym {
-		float: left;
-		margin-right: 1.42857142857143em;
-	}
-	
-	.homePageTextTitle {
-	    top: 1.14583333333333em;
-	    text-align: left;
-	}
-	
-	.homePageIcon {
-		margin-left: 17.5%;
-	}
-	
-	.totalCountData {
-		display:inline-block;
-		margin-left: 10px;
-	}
-	
-	.formHolder {
-		max-width: 33.333333%;
+@media screen and (min-width:840px) {
+	.mapHolder {
+		padding-bottom: 50%;
 	}
 }
