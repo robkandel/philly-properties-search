@@ -238,7 +238,6 @@ hgroup {
 
 .logo {
     position: relative;
-    text-align: center;
 }
 
 .logoText {
@@ -250,11 +249,32 @@ hgroup {
 .logoText .fa {
     font-size: 20px;
     color: #337ab7;
+    display:none;
 }
 
 .logoText span {
     margin-left: 5px;
 }
+
+.socialWrapper {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+.socialButton {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin-left: 0.71428571428571em;
+    line-height: 48px;
+}
+
+.socialButton .fa-2 {
+    font-size: 20px;
+}
+
 
 section {
     position: relative;
@@ -346,7 +366,7 @@ section {
 
 .homePage {
     max-width: 660px;
-    margin: 5% auto 0;
+    margin: 2.5% auto 0;
 }
 
 .homePageIcon {
@@ -687,6 +707,16 @@ table thead {
 	border-top: 1px solid #ddd;
 }
 
+@media screen and (min-width:500px) {
+	.logoText .fa {
+    	display:inline;
+    }
+    
+    .logoText {
+    	text-align:center;
+    }
+}
+
 
 @media screen and (min-width:560px) {
     .formHolder {
@@ -699,6 +729,10 @@ table thead {
     
     .mapHolder {
     	padding-bottom: 50%;
+    }
+    
+    .homePage {
+    	margin-top: 5%;
     }
 }
 
